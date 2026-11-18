@@ -1,0 +1,72 @@
+/* Shared styles for the University Computer Science Department website */
+:root {
+    --navy: #142b4a;
+    --blue: #245b91;
+    --pale: #eef4fa;
+    --ink: #1e293b;
+    --line: #cbd5e1;
+    --white: #ffffff;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--ink);
+    background: #f8fafc;
+}
+.container { width: min(1100px, 92%); margin-inline: auto; }
+.site-header { background: var(--navy); color: var(--white); padding: 18px 0; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.brand { display: inline-flex; align-items: center; gap: 12px; color: white; text-decoration: none; font-size: 1.35rem; font-weight: 700; }
+.brand img { background: white; border-radius: 12px; padding: 4px; }
+.tagline { margin: 0; color: #dbeafe; }
+.site-nav { background: var(--blue); }
+.nav-inner { display: flex; flex-wrap: wrap; gap: 4px; padding-block: 8px; }
+.site-nav a { color: white; text-decoration: none; padding: 8px 12px; border-radius: 6px; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { background: white; color: var(--navy); }
+main { padding-block: 30px 48px; min-height: 60vh; }
+h1, h2, h3 { color: var(--navy); line-height: 1.25; }
+h1 { font-size: clamp(2rem, 4vw, 2.7rem); }
+h2 { margin-top: 1.8rem; }
+.hero, .panel, .card { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 22px; margin-block: 18px; }
+.hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 24px; align-items: center; background: var(--pale); }
+.hero img, .content-image { width: 100%; height: auto; border-radius: 10px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.data-table { width: 100%; border-collapse: collapse; background: white; margin-block: 16px; }
+.data-table caption { text-align: left; font-weight: 700; padding: 10px 0; color: var(--navy); }
+.data-table th, .data-table td { border: 1px solid #64748b; padding: 10px; text-align: left; }
+.data-table th { background: var(--pale); }
+form { max-width: 650px; }
+fieldset { border: 1px solid var(--line); border-radius: 10px; padding: 20px; background: white; }
+legend { font-weight: 700; color: var(--navy); padding-inline: 8px; }
+label { display: block; font-weight: 700; margin: 12px 0 5px; }
+input, textarea, select { width: 100%; max-width: 100%; padding: 11px; border: 1px solid #64748b; border-radius: 6px; font: inherit; }
+button { background: var(--blue); color: white; border: 0; border-radius: 6px; padding: 11px 18px; font: inherit; cursor: pointer; }
+button:hover { background: var(--navy); }
+a { color: #174f83; }
+a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-visible {
+    outline: 3px solid #f59e0b; outline-offset: 3px;
+}
+.skip-link { position: absolute; left: -9999px; top: 8px; z-index: 1000; background: white; color: black; padding: 12px; }
+.skip-link:focus { left: 8px; }
+.site-footer { background: var(--navy); color: white; padding: 18px 0; }
+.site-footer p { margin: 0; }
+iframe { max-width: 100%; border: 1px solid var(--line); border-radius: 8px; }
+video { max-width: 100%; height: auto; }
+.notice { border-left: 4px solid var(--blue); background: var(--pale); padding: 12px 16px; }
+@media (max-width: 700px) {
+    .header-inner, .hero { display: block; }
+    .tagline { margin-top: 8px; }
+    .nav-inner { gap: 2px; }
+    .site-nav a { padding: 7px 9px; }
+}
+@media print {
+    .site-header, .site-nav, .site-footer, .skip-link, button { display: none !important; }
+    body { background: white; color: black; font-size: 11pt; }
+    main { width: 100%; padding: 0; }
+    .data-table { page-break-inside: avoid; }
+    a { color: black; text-decoration: none; }
+    .panel, .card, .hero { border: 0; box-shadow: none; }
+}
