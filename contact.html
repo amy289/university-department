@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact details, map placeholder, media and accessible contact form.">
+    <meta name="author" content="Computer Science Department">
+    <title>Contact the Department | CS Department</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollegeOrUniversity",
+      "name": "University Computer Science Department",
+      "department": "Computer Science"
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">
+                <img src="assets/images/cs-mark.svg" alt="" width="48" height="48">
+                <span>CS Department</span>
+            </a>
+            <p class="tagline">Learn · Build · Innovate</p>
+        </div>
+    </header>
+    <nav class="site-nav" aria-label="Main navigation">
+        <div class="container nav-inner">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="faculty.html">Faculty</a>
+        <a href="courses.html">Courses</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="news.html">News</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        </div>
+    </nav>
+    <main id="main-content" class="container">
+        <h1>Contact the Department</h1>
+
+        <section class="panel">
+            <h2>Contact Information</h2>
+            <p>Email: <a href="mailto:csdepartment@example.com">csdepartment@example.com</a></p>
+            <p>Phone: 0300-1234567</p>
+            <p>Address: University Campus, Karachi, Pakistan</p>
+        </section>
+        <section class="panel">
+            <h2>Department Building</h2>
+            <img class="content-image" style="max-width:600px" src="assets/images/department-building.svg" alt="Illustration of the Computer Science Department building">
+        </section>
+        <section class="panel">
+            <h2>Our Location</h2>
+            <p>Map placeholder for the university campus:</p>
+            <iframe title="University location map placeholder" src="about:blank" width="600" height="300" loading="lazy"></iframe>
+        </section>
+        <section class="panel">
+            <h2>Department Introduction Media</h2>
+            <video controls width="600" poster="assets/images/campus.svg">
+                <source src="assets/department-intro.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+            <p class="notice">A sample MP4 file is included in the assets folder. Replace it with your department's own video if required.</p>
+        </section>
+        <aside class="panel"><h2>Office Hours</h2><p>Monday to Friday: 9 AM - 5 PM</p></aside>
+        <section class="panel">
+            <h2>Contact Form</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Send a Message to the Department</legend>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <p><button type="submit">Send Message</button></p>
+                </fieldset>
+            </form>
+            <p class="notice">Demonstration form only. A server-side backend is required to send messages.</p>
+        </section>
+
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Computer Science Department · University Campus, Karachi</p>
+        </div>
+    </footer>
+</body>
+</html>
